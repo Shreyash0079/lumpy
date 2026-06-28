@@ -24,16 +24,19 @@ Cows datasets/
 1. **Clone or download this repository**
 
 2. **Install Python dependencies**:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. **Train the model** (if not already trained):
+
 ```bash
 python train_model.py
 ```
 
 This will:
+
 - Load and preprocess the images
 - Train a CNN model with data augmentation
 - Save the trained model as `cow_disease_model.h5`
@@ -42,11 +45,13 @@ This will:
 ## Usage
 
 1. **Start the Flask server**:
+
 ```bash
 python app.py
 ```
 
 2. **Open your browser** and navigate to:
+
 ```
 http://localhost:5000
 ```
@@ -63,6 +68,7 @@ http://localhost:5000
 ## Model Architecture
 
 The CNN model consists of:
+
 - 4 Convolutional blocks with Batch Normalization
 - MaxPooling layers for dimensionality reduction
 - Dropout layers for regularization
@@ -72,11 +78,13 @@ The CNN model consists of:
 ## API Endpoints
 
 ### POST `/predict`
+
 Upload an image file to get disease prediction.
 
 **Request**: Form data with `file` field (image file)
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -94,9 +102,11 @@ Upload an image file to get disease prediction.
 ```
 
 ### POST `/chatbot`
+
 Send a message to the chatbot.
 
 **Request**:
+
 ```json
 {
   "message": "What are the symptoms of lumpy skin disease?"
@@ -104,6 +114,7 @@ Send a message to the chatbot.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
